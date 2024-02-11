@@ -34,7 +34,7 @@ public class UserTests {
 		System.out.println("User Name:-" + user.getUsername());
 		res.then().log().all();
 		res.then().assertThat().statusCode(200);
-		ExtentTestManager.addJsonResponseToReport(res.asPrettyString());
+//		ExtentTestManager.addJsonResponseToReport(res.asPrettyString());
 	}
 
 	@Test(priority = 2)
@@ -43,7 +43,7 @@ public class UserTests {
 		Response res = UserEndPoints.getUser(user.getUsername());
 		res.then().log().all();
 		res.then().assertThat().statusCode(200);
-		ExtentTestManager.addJsonResponseToReport(res.asPrettyString());
+//		ExtentTestManager.addJsonResponseToReport(res.asPrettyString());
 
 	}
 
@@ -55,7 +55,7 @@ public class UserTests {
 		Response res = UserEndPoints.updateUser(userName, user);
 		res.then().log().all();
 		res.then().assertThat().statusCode(200);
-		ExtentTestManager.addJsonResponseToReport(res.asPrettyString());
+//		ExtentTestManager.addJsonResponseToReport(res.asPrettyString());
 	}
 
 	@Test(priority = 4,enabled = true)
@@ -65,7 +65,7 @@ public class UserTests {
 		res.then().log().all();
 		res.then().assertThat().statusCode(200);
 
-		ExtentTestManager.addJsonResponseToReport(res.asPrettyString());
+//		ExtentTestManager.addJsonResponseToReport(res.asPrettyString());
 	}
 
 	@Test(priority = 5,enabled = true)
@@ -74,7 +74,7 @@ public class UserTests {
 		Response res = UserEndPoints.deleteUser(user.getUsername());
 		res.then().log().all();
 		res.then().assertThat().statusCode(200);
-		ExtentTestManager.addJsonResponseToReport(res.asPrettyString());
+//		ExtentTestManager.addJsonResponseToReport(res.asPrettyString());
 	}
 
 }
